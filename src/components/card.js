@@ -13,7 +13,7 @@ export default function VideoCard(props) {
       },
     };
     axios
-      .get("https://utube-backend-ml-leopard.herokuapp.com/comments", { params: { id: props.value.Id } }, config)
+      .get("http://127.0.0.1:5000/comments", { params: { id: props.value.Id } }, config)
       .then((res) => {
         if (res.status === 200) {
           const details = {

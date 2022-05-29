@@ -20,7 +20,7 @@ export default function Home() {
       },
     };
     axios
-      .get("https://utube-backend-ml-leopard.herokuapp.com/videos", { params: { url: url } }, config)
+      .get("http://127.0.0.1:5000/videos", { params: { url: url } }, config)
       .then((res) => {
         if (res.status === 200) {
           if (!res.data.error) {
