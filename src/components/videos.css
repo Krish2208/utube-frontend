@@ -1,0 +1,10 @@
+.videos {
+  overflow-y: scroll;
+  height: 14%;
+  padding-bottom: 10px;
+}
+
+.comments {
+  overflow-y: scroll;
+  height: 70%;
+}
