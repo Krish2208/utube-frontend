@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Project- YouTube Sentiment Analyser
+### By - ML Leopards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Contributors:
 
-## Available Scripts
+Krish Agrawal
 
-In the project directory, you can run:
+Jha Rohan
 
-### `npm start`
+Rupal Shah
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Backend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The backend is written using Flask. Data scrapping is done using HTTP- Requests library. As YouTube automatically blocks bots, we have used YouTube data API V3 for data requests.
+For analysing the sentiment associated with the comments, we have used TensorFlow Keras with other machine learning and data handling libraries like nltk, re, sklearn, NumPy, pandas and math. We have trained a Natural Language Processing (NLP) model on 10,000 English comments with a max length of 100 for each data point with post padding and truncating. The model consists of 2 bi-directional Long Short Term Memory (LSTM) layers with 511,910 trainable parameters. The model was saved with the weights and architecture and deployed 
 
-### `npm test`
+## Frontend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The frontend is written in Javascript using the React library. We used MUI Core for the components and MUI Icons for icons. Axios for making requests to the backend server. We used Coolors to generate a colour palette. 
 
-### `npm run build`
+## Instructions to operate the portal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Please load the website. 
+2. Type the valid URL of the youtube channel (preferably American) in the search box and click the search icon to proceed.
+3. The website would then load the thumbnails of the various videos available on the channel.
+4. Please click on the video's thumbnail to proceed with the sentiment analysis.
+5. The website would then load the top 1000 comments with their sentiment analysis and the count of various sentiments associated with them. Please have patience as the model takes time to render the comments live due to computational limitations.
+6. Enjoy the insights and grow your channel! 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
